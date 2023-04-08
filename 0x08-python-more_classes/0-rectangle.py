@@ -4,5 +4,5 @@
 
 class Rectangle:
     """empty rectangle"""
-    rectangle = {}
+    pass
 
