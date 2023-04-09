@@ -13,7 +13,7 @@ class Rectangle:
             
             Args:
                 width: width of rectangle
-                length: length of a rectangle
+                height: height of a rectangle
             """
             self.width = width
             self.height = height
@@ -43,18 +43,13 @@ class Rectangle:
     
     @height.setter
     def height(self, value):
-        """sets the width of the rectangle
+        """sets the height of the rectangle
 
         Args:
-            value:sets the value of the width, must be a positive integer
+            value:sets the value of the height, must be a positive integer
         """
         if not isinstance(value, int):
-            raise TypeError("length must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("Length must be >= 0")
+            raise ValueError("height must be >= 0")
         self.height = value
-
-    
-my_rectangle = Rectangle('seven', 4)
-print(my_rectangle.__dict__)
-
