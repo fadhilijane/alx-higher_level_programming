@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """module 1-rectangle
-Defines a Rectangle class
+Defines a Rectangle class.
 """
 
 
 class Rectangle:
-    """Rectangle class is defined by width and height"""
+    """Rectangle class is defined by width and height."""
 
     def __init__(self, width=0, height=0):
-            """Initializes a Rectangle instance
+            """Initializes a Rectangle instance.
             
             Args:
                 width: width of rectangle
@@ -19,12 +19,12 @@ class Rectangle:
     
     @property
     def width(self):
-        """Gets the width of the rectangle"""
+        """Retrieves the width of a Rectangle instance."""
         return self.__width
     
     @width.setter
     def width(self, value):
-        """sets the width of the rectangle
+        """sets the width of the Rectangle instance
 
         Args:
             value:sets the value of the width, must be a positive integer
@@ -37,12 +37,12 @@ class Rectangle:
     
     @property
     def height(self):
-        """Gets the height of the rectangle"""
+        """Gets the height of the Rectangle instance."""
         return self.__height
     
     @height.setter
     def height(self, value):
-        """sets the height of the rectangle
+        """sets the height of the Rectangle instance
 
         Args:
             value:sets the value of the height, must be a positive integer
