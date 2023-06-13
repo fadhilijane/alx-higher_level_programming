@@ -13,5 +13,5 @@ def load_from_json_file(filename):
     Args:
     filename: the json file to be converted
     """
-    with open(filename, 'w') as my_file:
+    with open(filename, 'r') as my_file:
         return json.load(my_file)
