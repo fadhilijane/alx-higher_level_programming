@@ -12,6 +12,5 @@ def write_file(filename="", text=""):
     text: text written
     """
     with open(filename, mode="w", encoding="utf-8") as myFile:
-        myFile.write(text)
-        text_length = len(text)
-        return (text_length, end="")
+        return myFile.write(text)
+    
