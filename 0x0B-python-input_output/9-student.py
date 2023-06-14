@@ -4,9 +4,6 @@ creates a class that defines student
 """
 
 
-import json
-
-
 class Student:
     """class - gives public xtics of student
 
