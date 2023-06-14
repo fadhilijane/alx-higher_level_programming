@@ -8,9 +8,8 @@ import json
 
 
 class Student:
-    """
-    gives public xtics of students
-    
+    """class - gives public xtics of student
+
     public attribute:
    - first_name
     -last_name
