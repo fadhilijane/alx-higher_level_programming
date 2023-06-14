@@ -9,12 +9,11 @@ import json
 
 class Student:
     """
-    gives public xtics of students
+    gives public xtics of students"""
 
-    -first_name
-    -last_name
-    -age
-    """
+    first_name
+    last_name
+    age
 
     def __init__(self, first_name, last_name, age):
         """ object instantion of student
