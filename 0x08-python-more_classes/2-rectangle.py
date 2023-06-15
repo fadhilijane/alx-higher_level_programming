@@ -8,14 +8,15 @@ class Rectangle:
     """Rectangle class is defined by width and height."""
 
     def __init__(self, width=0, height=0):
-            """Initializes a Rectangle instance.
-            
-            Args:
-                width: width of rectangle
-                height: height of a rectangle
-            """
-            self.width = width
-            self.height = height
+        """Initializes a Rectangle instance.
+
+        Args:
+        width: width of rectangle
+        height: height of a rectangle
+        """
+
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
