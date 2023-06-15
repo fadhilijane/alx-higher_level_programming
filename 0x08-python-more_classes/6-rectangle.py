@@ -89,3 +89,4 @@ class Rectangle:
     def __del__(self):
         """delete an instsnce"""
         print("Bye rectangle...")
+        Rectangle.instances -= 1
