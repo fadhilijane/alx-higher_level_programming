@@ -84,4 +84,4 @@ class Rectangle:
     def __repr__(self):
         """It returns string rep that is able to recreate
         new instance"""
-        return f'Rectangle("self.__width", "self.__height")'
+        return "Rectangle({}, {})".format(self.__width, self.__height)
