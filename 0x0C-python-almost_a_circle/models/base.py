@@ -28,8 +28,8 @@ Class Base:
         """returns a JSON representation of list-dictionaries"""
         if list_dictionaries is None of list_dictionaries == []:
             return "[]"
-        if (type(list_dictionaries) != list or not all(type(x) 
-            == dict for x in list_dictionaries)):
+        if (type(list_dictionaries) != list or not all(type(x)
+                                              == dict for x in list_dictionaries)):
             raise TypeError("list_dictionaries must be a list of dictionaries")
         return json.dumps(list_dictionaries)
 
@@ -65,25 +65,25 @@ Class Base:
         return dummy
 
     @classmethod
-    def load_from_file(cls)
-    """returns a list of instances"""
-     filename = cls.__name__ + ".json"
-     l = []
-     lists_dicts = []
-     if os.path.exists(filename):
-         with open(filename, 'r') as my_file:
-             s = my_file.read()
-             lists_dicts = cls.from_json_string(s)
-             for d in list_dicts:
-                 l.append(cls.create(**d))
-        return l
+    def load_from_file(cls):
+        """returns a list of instances"""
+        filename = cls.__name__ + ".json"
+        l_str = []
+        lists_dicts = []
+        if os.path.exists(filename):
+            with open(filename, 'r') as my_file:
+                s = my_file.read()
+                lists_dicts = cls.from_json_string(s)
+                for d in list_dicts:
+                    l_str.append(cls.create(**d))
+        return l_str
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """serializes objs in csv format and saves it to file"""
-        if (type(list_objs) != list and list_objs is
-            not None or not all(isinstance(x, cls)for x in list_objs)):
-            raise TypeError("list_objs must be a list of instances")
+        if (type(list_objs) != list and list_objs is not None or not
+                  all(isinstance(x, cls)for x in list_objs)):
+             raise TypeError("list_objs must be a list of instances")
         filename = cls.__name__ + ".csv"
         with open(filename, 'w') as my_file:
             if list_objs is not None:
@@ -100,7 +100,7 @@ Class Base:
     def load_from_file_csv(cls):
         """deserializes csv format from file"""
         filename = cls.__name__ + ".csv"
-        l = []
+        l_str = []
         if os.path.exists(filename):
             with open(filename, 'r') as my_file:
                 reader = csv.readerr(f, delimiter=',')
@@ -111,8 +111,5 @@ Class Base:
                 for x, row in enumerate(reader):
                     if e:
                         seattr(i, fields[j], int(e))
-                l.append(i)
-        return l
-
-
-
+                l_str.append(i)
+        return l_str
