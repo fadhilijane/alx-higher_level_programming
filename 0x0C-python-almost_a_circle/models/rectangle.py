@@ -86,9 +86,54 @@ class Rectangle(Base):
 
         def display(self):
             """displays th '#' instead of handling x and y"""
-            xter_rep = ''
-            for i in range(self.__width):
-                for j in range(self.__height):
-                    xter_rep += '#'
-                xter_rep += '\n'
-            return xter_rep[:-1]
+            for y in range(0, self.__y):
+                print()
+            for i in range(0, self.__height):
+                for x in range(0, self.__x):
+                    print(" ", end="")
+                for j in range(0, self.__width):
+                    print('#', end="")
+            print()
+
+        def __str__(self):
+            """string representation of a rectangle"""
+            return "[Rectangle]({}) {}/{} - {}/{}".format(self.id, self.__x,
+                                                          self.__y,
+                                                          self.__width,
+                                                          self.__height)
+
+        def update(self, *args, **kwargs):
+            """updates the __init__ args"""
+            if args is notNone and len(args) != 0:
+                if len(args) >= 1:
+                    if type(args[0]) != int and args[0] is not None:
+                        raise TypeError("id must be an integer")
+                    self.id = args[0]
+                if len(args) > 1:
+                    self.width = args[1]
+                if len(args) > 2:
+                    self.height = args[2]
+                if len(args) > 3:
+                    self.x = args[3]
+                if len(args) > 4:
+                    self.y = args[4]
+            else:
+                for key, value in kwargs.items():
+                    if key == "id":
+                        if type(value) != int and valueis not None:
+                            raise TypeError("id must be integer")
+                        self.id = value
+                    if key == "width":
+                        self.width = value
+                    if key == "height":
+                        self.height = value
+                    if key == "x":
+                        self.x = value
+                    if key == "y":
+                        self.y = value
+
+        def to_dictionary(self):
+            """Returns dict rep of the rectangle"""
+            my_dictionary = {"x": self.x, "y": self.y, "id": self.id,
+                             "height": self.height, "width": self.width}
+            return my_dictionary
