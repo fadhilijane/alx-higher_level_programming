@@ -1,1 +1,1 @@
-DROP USER user_0d_1@localhost;
+DROP USER user_0d_2@localhost;
