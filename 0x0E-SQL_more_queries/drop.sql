@@ -1,1 +1,1 @@
-DROP USER user_0d_2@localhost;
+DROP DATABASE hbtn_0d_usa;
