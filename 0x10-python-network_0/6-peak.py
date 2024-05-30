@@ -3,8 +3,11 @@
 function that finds peak in alist of integers
 """
 
+
 def find_peak(list_of_integers):
-   """looks for peak"""
+   """
+   looks for peak
+   """
    if not list_of_integers:
        return None
 
